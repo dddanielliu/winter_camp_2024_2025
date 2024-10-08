@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>5. 陣列＆字串  </title>
+        <title>5. 陣列＆字串</title>
 
         <link rel="stylesheet" href="https://dddanielliu.github.io/reveal.js/dist/reset.css">
         <link rel="stylesheet" href="https://dddanielliu.github.io/reveal.js/dist/reveal.css">
@@ -21,6 +21,9 @@
 
         <!-- Font Falily Support -->
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <!-- tldreveal (drawing tool) -->
+        <link rel="stylesheet" href="https://unpkg.com/tldreveal/dist/bundle/index.css" />
 
         <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
         <script>
@@ -315,7 +318,7 @@
                         </div>
                     </section>
                     <!-- <section data-transition="fade-in fade-out">
-						<h3>陣列的宣告</h3>
+                        <h3>陣列的宣告</h3>
                         <div class="text-align-left">
                             <ul>
                                 <li>
@@ -335,36 +338,36 @@ int integerArray3[5]={2,3}; // 2,3,0,0,0              </code></pre>
                             </ul>
                         </div>
                     </section> -->
-					<section data-markdown data-transition="fade-in fade-out">
+                    <section data-markdown data-transition="fade-in fade-out">
                         <textarea data-template>
-						### 陣列的宣告：
+                        ### 陣列的宣告：
 
 
-						<div class="text-align-left">
+                        <div class="text-align-left">
 
-						* 創建一個整數(int)陣列
+                        * 創建一個整數(int)陣列
 
-						```c
-						// 給定數值編譯器自動判斷陣列大小
-						int integerArray[] = {2,7,6,8,3};
+                        ```c
+                        // 給定數值編譯器自動判斷陣列大小
+                        int integerArray[] = {2,7,6,8,3};
 
-						// 創建一個長度5的int陣列，不給定初始值
-						int integerArray2[5];
+                        // 創建一個長度5的int陣列，不給定初始值
+                        int integerArray2[5];
 
-						// 創建一個長度5的int陣列，給定預設初始值(0)
-						int integerArray3[5] = {};
+                        // 創建一個長度5的int陣列，給定預設初始值(0)
+                        int integerArray3[5] = {};
 
-						// 創建一個長度5的int陣列，給定某些初始值，其它為0
-						int integerArray3[5] = {2,3}; // 2,3,0,0,0
-						```
+                        // 創建一個長度5的int陣列，給定某些初始值，其它為0
+                        int integerArray3[5] = {2,3}; // 2,3,0,0,0
+                        ```
 
-						* 創建一個浮點(float/double)陣列
-						```c
-						float arr1[] = {2.3, 5.4, 9.3, 8.03};
-						double arr2[] = {8.3, 2.7, 3.6};
-						```
+                        * 創建一個浮點(float/double)陣列
+                        ```c
+                        float arr1[] = {2.3, 5.4, 9.3, 8.03};
+                        double arr2[] = {8.3, 2.7, 3.6};
+                        ```
 
-						</div>
+                        </div>
                         </textarea>
                     </section>
                     <section data-markdown data-transition="fade-in fade-out">
@@ -385,14 +388,14 @@ int integerArray3[5]={2,3}; // 2,3,0,0,0              </code></pre>
                             }
                             ```
                             
-                            <div class="text-align-left fragment" data-fragment-index="10" style="margin-left: 50px;">
+                            <div class="text-align-left fragment" data-fragment-index="1" style="margin-left: 50px;">
                                 印出：
                             </div>
 
                             ```plaintext
                             2 4 7 8 3 
                             ```
-                            <!-- .element: class="fragment" data-fragment-index="10" -->
+                            <!-- .element: class="fragment" data-fragment-index="1" -->
 
                         </textarea>
                     </section>
@@ -437,7 +440,7 @@ avg = 7
                               </div>
                             </div>
                     </section>
-                    <section data-transition="fade-in" style="text-align: left;" data-auto-animate>
+                    <section style="text-align: left;" data-auto-animate data-transition="fade-out">
                         <div style="margin-left: 50px;">
                             Array 範例2.2
                         </div>
@@ -478,30 +481,96 @@ avg = 7.75
                             </div>
                     </section>
                 </section>
-                <section data-background-color="white" data-transition="slide">
-                    <iframe
-  src="https://carbon.now.sh/embed?bg=rgba%280%2C0%2C0%2C0%29&t=one-dark&wt=none&l=text%2Fx-csrc&width=680&ds=true&dsyoff=0px&dsblur=23px&wc=true&wa=false&pv=27px&ph=34px&ln=false&fl=1&fm=JetBrains+Mono&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2523include%2520%253Cstdio.h%253E%250Aint%2520main%28%29%257B%250A%2520%2520%2520%2520int%2520arr%255B4%255D%253B%250A%2520%2520%2520%2520for%2520%28int%2520i%253D0%253B%2520i%253C4%253B%2520i%252B%252B%29%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520scanf%28%2522%2525d%2522%252C%2520%2526arr%255Bi%255D%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520int%2520sum%2520%253D%25200%253B%250A%2520%2520%2520%2520for%2520%28int%2520i%253D0%253B%2520i%253C4%253B%2520i%252B%252B%29%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520sum%2520%252B%253D%2520arr%255Bi%255D%253B%250A%2520%2520%2520%2520%257D%250A%2520%250A%2520%2520%2520%2520printf%28%2522sum%2520%253D%2520%2525d%255Cn%2522%252C%2520sum%29%253B%250A%2520%2520%2520%2520printf%28%2522avg%2520%253D%2520%2525.2lf%255Cn%2522%252C%2520%28double%29sum%252F4%29%253B%250A%2520%2520%2520%2520return%25200%253B%250A%257D"
-  style="width: 680px; height: 426px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
-                </section>
-                <section data-markdown data-transition="fade-in fade-out">
-                    <textarea data-template>
-                        `arr[0]a`
-                    </textarea>
-                </section>
-                <section data-markdown data-background-color="white" data-background-transition="fade-in">
-                    <textarea data-template>
-                        `arr[0]a`
-                    </textarea>
-                </section>
                 <section>
-                    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-                    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+                    <section data-markdown data-transition="slide-in fade-out">
+                        # 字串
+                    </section>
+                    <section data-markdown data-transition="fade-in fade-out">
+                        <textarea  data-template>
+                            ## 字串是什麼？
+
+                            <br>
+                            <h3 style="color: inherit;">其實字串就是一種字元陣列</h3>
+                        </textarea>
+                    </section>
+                    <section data-markdown style="text-align: left" data-transition="fade-in fade-out">
+                        <textarea  data-template>
+                            <h3 style="text-align: center;">字串的宣告</h3>
+                            <br>
+                            <p>
+
+                            ```c
+                            char s[] = {'a', 'p', 'p', 'l', 'e', '\0'};
+                            ```
+                            
+                            <span style="margin: 0px 0px 0px 50px; font-size: 37px;">`\0` 是結束字元，代表字串結尾。</span>
+                            </p>
+
+                            <p style="padding-top: 10px;">
+
+                            ```c
+                            char s[] = "apple";
+                            ```
+                            <span style="margin: 0px 0px 0px 50px; font-size: 37px;">與上面相同效果</span>
+
+                            </p>
+                            
+                        </textarea>
+                    </section>
+                    <section data-markdown style="text-align: left" data-transition="fade-in fade-out">
+                        <textarea  data-template>
+
+                            <span style="margin-left: 20px;">字串範例：</span>
+    
+                            ```c[]
+                            #include <stdio.h>
+                            int main(){
+                                char s1[] = "Hello, World";
+                                char s2[] = {'H', 'E', 'L', 'L', 'O', '\0'};
+
+                                printf("%c %c\n", s1[4], s2[1]);
+                                printf("%s\n", s1);
+                                printf("%s\n", s2);
+
+                                return 0;
+                            }
+                            ```
+
+                            <span class="fragment" data-fragment-index="1" style="margin-left: 30px;">輸出：</span>
+                            
+                            ```plaintext
+                            o E
+                            Hello, World
+                            HELLO
+                            ```
+                            <!-- .element: class="fragment" data-fragment-index="1" -->
+                        </textarea>
+                    </section>
+                    <section data-markdown style="text-align: left" data-transition="fade-in fade-out">
+                        <textarea  data-template>
+
+                            <div style="width: 700px; position: absolute; left: 13%;">
+
+                            <span style="margin-left: 20px;">補充：其它字串相關函式</span>
+                                    
+                            ```c
+                            // 使用以下函式需要引入此標頭檔
+                            #include <string.h>
+
+                            // 將s1之內容複製到s2
+                            strcpy(destination, source);
+
+                            // 比較字串之字典序
+                            strcmp(s1, s2)
+
+                            // 將s2的內容加到s1之後
+                            strcat(s1, s2);
+                            ```
+
+                            </div>
+                        </textarea>
+                    </section>
                 </section>
-                <section>Slide 1</section>
-                <section>Slide 2</section>
-                <section></section>
             </div>
         </div>
 
@@ -511,6 +580,7 @@ avg = 7.75
         <script src="https://dddanielliu.github.io/reveal.js/plugin/math/math.js"></script>
         <script src="https://dddanielliu.github.io/reveal.js/plugin/highlight/highlight.js"></script>
         <!-- <script src="https://dddanielliu.github.io/reveal.js/plugin/appearance/appearance.js"></script> -->
+        <script src="https://unpkg.com/tldreveal/dist/bundle/index.js"></script>
         <script>
             // More info about initialization & config:
             // - https://revealjs.com/initialization/
@@ -520,11 +590,21 @@ avg = 7.75
                 transition: 'none',
                 slideNumber: true,
                 
-                controls: true,
-                progress: true,
+                controls: false,
+                progress: false,
+
+                // scrollActivationWidth: undefined,
                 // Learn about plugins: https://revealjs.com/plugins/
-                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
-                // plugins: [ RevealMarkdown, RevealNotes, RevealMath.KaTeX ]
+                // plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX, Tldreveal.Tldreveal() ],
+                tldreveal: {
+                    // Set for light-themed presentations
+                    // isDarkMode: false,
+                    // Set the default drawing color to red
+                    defaultStyles: {
+                        color: "red"
+                    }
+                }
             });
             Reveal.configure({ backgroundTransition: 'fade' })
         </script>
