@@ -390,7 +390,7 @@ int main(){
 印出：
 
 ```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
-2 4 7 8 3
+2 4 7 8 3 
 ```
 
 ---
@@ -796,7 +796,7 @@ layout: center
 <br>
 
 ```c{*}{lines:false, class:'!children:text-1.1rem'}
-// 將s1之內容複製到s2
+// 將一字串之內容複製到另一字串
 strcpy(destination, source);
 
 // 比較字串之字典序
@@ -1068,7 +1068,7 @@ int main(){
 輸出：
 
 ```plaintext{*}{lines:false, class:'!children:text-1.2rem'}
-3 7 2 9 4
+3 7 2 9 4 
 ```
 
 </div>
@@ -1090,7 +1090,7 @@ transition: fade
 #include <stdio.h>
 int main(){
     int arr[5] = {9, 3, 1, 0, 8};
-    printf("%d\n", *(arr+1))
+    printf("%d\n", *(arr+1));
     printf("%d\n", *arr+1);
 
     return 0;
@@ -1117,7 +1117,7 @@ title: 指摽與陣列 範例2(1)
 #include <stdio.h>
 int main(){
     int arr[5] = {9, 3, 1, 0, 8};
-    printf("%d\n", *(arr+1))
+    printf("%d\n", *(arr+1));
     printf("%d\n", *arr+1);
 
     return 0;
@@ -1131,7 +1131,7 @@ int main(){
 
 ```plaintext{*}{lines:false, class:'!children:text-1.2rem'}
 3
-4
+10
 ```
 
 </div>
@@ -1140,6 +1140,7 @@ int main(){
 ---
 title: 指摽與陣列 範例3 (進階)(0)
 transition: fade
+hide: true
 ---
 
 指摽與陣列 範例3 (進階)
@@ -1173,7 +1174,8 @@ int main(){
 </div>
 
 ---
-title: 指摽與陣列 範例3 (進階)(0)
+title: 指摽與陣列 範例3 (進階)(1)
+hide: true
 ---
 
 指摽與陣列 範例3 (進階)
@@ -1219,3 +1221,108 @@ int main(){
 </div>
 
 ---
+title: 二維陣列
+---
+
+### 二維陣列
+
+<br>
+```c{*}{lines:false, class:'!children:text-1.5rem'}
+int arr[3][4]; // 3x4 2d array. (3 rows, 4 columns)
+```
+
+<Arrow x1="134" y1="194" x2="183" y2="163" color="#3ce489"/>
+<span class="absolute left-123px top-208px transform -translate-x-1/2 -translate-y-1/2" font-size="1.75rem" style="color: #3ce489">row</span>
+<Arrow x1="130" y1="225" x2="174" y2="320" color="#3ce489"/>
+<span class="absolute left-98px top-394.5px transform -translate-x-1/2 -translate-y-1/2" font-size="1.3rem" style="color: white; background-color:#3ce489; border-radius: 8px; padding: 4px 6px 2.2px 6px;">3 rows</span>
+
+<Arrow x1="220" y1="193" x2="228" y2="164" color="#e4bb4f"/>
+<span class="absolute left-225px top-208px transform -translate-x-1/2 -translate-y-1/2" font-size="1.75rem" style="color: #e4bb4f">column</span>
+<Arrow x1="200" y1="225" x2="237" y2="287" color="#e4bb4f"/>
+<span class="absolute left-481px top-243px transform -translate-x-1/2 -translate-y-1/2" font-size="1.3rem" style="color: white; background-color:#e4bb4f; border-radius: 8px; padding: 4.1px 6px 2px 6px;">4 columns</span>
+
+<svg width="68" height="149" class="absolute left-159px top-320px">
+  <rect width="100%" height="100%" style="fill:transparent; stroke:#3ce489; stroke-width:5;"/>
+</svg>
+<svg width="486" height="31" class="absolute left-238px top-277px">
+  <rect width="100%" height="100%" style="fill:transparent; stroke:#e4bb4f; stroke-width:5;"/>
+</svg>
+<img src="https://imgur.com/N9kpxUz.png" class="object-contain h-60 rounded-lg" style="margin-top:82px; margin-left:80px;"></img>
+
+
+---
+title: 二維陣列宣告舉例
+---
+
+### 二維陣列
+
+<div style="margin-top: 18px"></div>
+
+```c{*}{lines:false, class:'!children:text-1.5rem'}
+int mtx[2][3] = { {1, 4, 2}, {3, 6, 8} };
+```
+
+<div class="rounded-lg" style="padding:17px; background-color: #e9fef2; display: flex; width: fit-content; margin-top: 10px">
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;"></td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 0</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 1</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 2</td>
+    </tr>
+    <tr style="border: none;">
+      <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">ROW 0</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">1</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">4</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">2</td>
+    </tr>
+    <tr style="border: none;">
+      <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">ROW 1</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">3</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">6</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div style="background-color: #fff8ef; padding: 5px 20px 10px 60px; margin-top: 15px; margin-left: 0px; border-radius: 5px; width: fit-content;">
+<span font-size="1.75rem" style="color: red; margin-left: -50px">在記憶體中的排列方式：</span>
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][0]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][1]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][2]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][0]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][1]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][2]</td>
+    </tr>
+  </tbody>
+</table>
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">1</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">4</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">2</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">3</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">6</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">8</td>
+    </tr>
+  </tbody>
+</table>
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx</td>
+        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx+1</td>
+        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx+2</td>
+        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx+3</td>
+        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx+4</td>
+        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx+5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
