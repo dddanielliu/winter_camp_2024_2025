@@ -37,6 +37,16 @@ p, li {
     line-height: 1.2 !important; /* Set a global line-height */
 }
 
+p .katex {
+    font-size: 1.1em !important; /* Set desired font size for .katex */
+    line-height: initial !important; /* Set desired line-height for .katex */
+}
+
+.no-ligatures {
+    font-variant-ligatures: none;
+}
+
+
 /* Exclude p and li inside the specific prose container */
 .prose.overflow-auto.outline-none.slidev-note.border-transparent.border-2.w-full.max-w-full.h-full.overflow-auto.p-2.lg\:p-4 p,
 .prose.overflow-auto.outline-none.slidev-note.border-transparent.border-2.w-full.max-w-full.h-full.overflow-auto.p-2.lg\:p-4 li,

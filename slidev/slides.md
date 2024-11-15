@@ -15,7 +15,7 @@ info: |
 class: text-center
 # https://sli.dev/features/drawing
 drawings:
-  persist: true
+  persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
@@ -328,7 +328,7 @@ md: leading-loose
 
 * 創建一個整數(int)陣列
 
-```c{*}{lines:false, class:'!children:text-0.95rem'}
+```c{*}{lines:false, class:'!children:text-0.95rem no-ligatures'}
 // 給定數值編譯器自動判斷陣列大小
 int integerArray[] = {2,7,6,8,3};
 
@@ -343,7 +343,7 @@ int integerArray3[5]={2,3}; // 2,3,0,0,0
 ```
 
 * 創建一個浮點(float/double)陣列
-```c{*}{lines:false, class:'!children:text-0.95rem'}
+```c{*}{lines:false, class:'!children:text-0.95rem no-ligatures'}
 float arr1[] = {2.3, 5.4, 9.3, 8.03};
 double arr2[] = {8.3, 2.7, 3.6};
 ```
@@ -357,7 +357,7 @@ transition: fade
 
 Array 範例1
 
-```c {*}{lines:true, class:'!children:text-1.1rem'}
+```c {*}{lines:true, class:'!children:text-1.1rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5] = {2,4,7,8,3};
@@ -375,7 +375,7 @@ title: Array 範例1(1)
 
 Array 範例1
 
-```c {*}{lines:true, class:'!children:text-1.1rem'}
+```c {*}{lines:true, class:'!children:text-1.1rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5] = {2,4,7,8,3};
@@ -389,7 +389,7 @@ int main(){
 
 印出：
 
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 2 4 7 8 3 
 ```
 
@@ -402,7 +402,7 @@ Array 範例2.1
 
 <div class="flex flex-row" style="width:870px;">
   <div class="basis-68/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.05rem'}
+```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[4];
@@ -424,7 +424,7 @@ int main(){
 <div class="basis-32/100">
 <p>輸入：</p>
 
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 5 13 4 9
 ```
 
@@ -441,7 +441,7 @@ Array 範例2.1
 
 <div class="flex flex-row" style="width:100%;">
   <div class="basis-68/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.05rem'}
+```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[4];
@@ -463,7 +463,7 @@ int main(){
   <div class="basis-32/100">
   <p>輸入：</p>
 
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 5 13 4 9
 ```
 
@@ -471,7 +471,7 @@ int main(){
 
 
 <p>輸出：</p>
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 sum = 31
 avg = 7
 ```
@@ -488,7 +488,7 @@ Array 範例2.2
 
 <div class="flex flex-row" style="width:100%;">
   <div class="basis-70/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.05rem'}
+```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[4];
@@ -510,7 +510,7 @@ int main(){
   <div class="basis-30/100">
   <p>輸入：</p>
 
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 5 13 4 9
 ```
 
@@ -527,7 +527,7 @@ Array 範例2.2
 
 <div class="flex flex-row" style="width:100%;">
   <div class="basis-70/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.05rem'}
+```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[4];
@@ -549,14 +549,14 @@ int main(){
   <div class="basis-30/100">
   <p>輸入：</p>
 
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 5 13 4 9
 ```
 
 <br>
 
 <p>輸出：</p>
-```plaintext {*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext {*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 sum = 31
 avg = 7.75
 ```
@@ -588,7 +588,7 @@ class: text-center
 ### 字串的宣告
 
 <div style="padding-top: 45px">
-```c{*}{lines:false, class:'!children:text-1.5rem'}
+```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
 char s[] = {'a', 'p', 'p', 'l', 'e', '\0'};
 ```
 
@@ -596,7 +596,7 @@ char s[] = {'a', 'p', 'p', 'l', 'e', '\0'};
 
 <br>
 
-```c{*}{lines:false, class:'!children:text-1.5rem'}
+```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
 char s[] = "apple";
 ```
 
@@ -613,7 +613,7 @@ transition: fade
 
 <div class="flex flex-row" style="width:100%;">
     <div class="basis-76/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     char s1[] = "Hello, World";
@@ -639,7 +639,7 @@ title: 字串範例1(1)
 
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-76/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     char s1[] = "Hello, World";
@@ -657,7 +657,7 @@ int main(){
 <div class="basis-24/100">
 <p>輸出：</p>
 
-```plaintext{*}{class:'!children:text-1.2rem'}
+```plaintext{*}{class:'!children:text-1.2rem no-ligatures'}
 o E
 Hello, World
 HELLO
@@ -675,7 +675,7 @@ transition: fade
 
 <div class="flex flex-row" style="width:100%;">
     <div class="basis-60/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     char myStr[20];
@@ -688,12 +688,12 @@ int main(){
 </div>
     <div class="basis-40/100">
     <p>輸入：</p>
-```plaintext{*}{class:'!children:text-1.2rem'}
+```plaintext{*}{class:'!children:text-1.2rem no-ligatures'}
 C_String
 ```
 <div style="visibility: hidden">
     <p>輸出：</p>
-```plaintext{*}{class:'!children:text-1.2rem'}
+```plaintext{*}{class:'!children:text-1.2rem no-ligatures'}
 Hi, C_String
 ```
 </div>
@@ -732,7 +732,7 @@ title: 字串範例2(2)
 
 <div class="flex flex-row" style="width:100%;">
     <div class="basis-60/100" style="padding: 0px 50px 0px 10px; ">
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     char myStr[20];
@@ -745,11 +745,11 @@ int main(){
 </div>
     <div class="basis-40/100">
     <p>輸入：</p>
-```plaintext{*}{class:'!children:text-1.2rem'}
+```plaintext{*}{class:'!children:text-1.2rem no-ligatures'}
 C_String
 ```
     <p>輸出：</p>
-```plaintext{*}{class:'!children:text-1.2rem'}
+```plaintext{*}{class:'!children:text-1.2rem no-ligatures'}
 Hi, C_String
 ```
 </div>
@@ -788,14 +788,14 @@ layout: center
 補充：其它字串相關函式
 
 
-```c{*}{lines:false, class:'!children:text-1.1rem'}
+```c{*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 // 使用以下函式需要引入此標頭檔
 #include <string.h>
 ```
 
 <br>
 
-```c{*}{lines:false, class:'!children:text-1.1rem'}
+```c{*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 // 將一字串之內容複製到另一字串
 strcpy(destination, source);
 
@@ -833,7 +833,7 @@ class: text-center
   <div class="basis-55/100">
 
 
-```c{*}{lines:true, startLine: 1,class:'!children:text-1.4rem'}
+```c{*}{lines:true, startLine: 1,class:'!children:text-1.4rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int A = 3;
@@ -884,7 +884,7 @@ transition: fade
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-60/100" style="padding: 0px 50px 0px 10px;">
 
-```c{*|7|7|*}{lines:true, class:'!children:text-1.4rem'}
+```c{*|7|7|*}{lines:true, class:'!children:text-1.4rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int A = 3;
@@ -927,7 +927,7 @@ title: 指標範例1(2)
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-60/100" style="padding: 0px 50px 0px 10px;">
 
-```c{*}{lines:true, class:'!children:text-1.4rem'}
+```c{*}{lines:true, class:'!children:text-1.4rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int A = 3;
@@ -954,7 +954,7 @@ int main(){
 
 輸出：
 
-```plaintext{*}{lines:false, class:'!children:text-1.4rem'}
+```plaintext{*}{lines:false, class:'!children:text-1.4rem no-ligatures'}
 3
 50
 ```
@@ -971,7 +971,7 @@ int main(){
 <br>
 <div class="flex-grow flex items-center justify-center">
 
-```c{*}{lines:false, class:'!children:text-1.6rem'}
+```c{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
 int arr[10];
 ```
 
@@ -1006,7 +1006,7 @@ transition: fade
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-75/100" style="padding: 0px 10px 0px 0px;">
 
-```c{*|4-5|6-7|*}{lines:true, class:'!children:text-1.2rem'}
+```c{*|4-5|6-7|*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5];
@@ -1024,7 +1024,7 @@ int main(){
 
 輸入：
 
-```plaintext{*}{lines:false, class:'!children:text-1.2rem'}
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
 3 7 2 9 4
 ```
 
@@ -1041,7 +1041,7 @@ title: 指摽與陣列 範例1(1)
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-75/100" style="padding: 0px 10px 0px 0px;">
 
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5];
@@ -1059,7 +1059,7 @@ int main(){
 
 輸入：
 
-```plaintext{*}{lines:false, class:'!children:text-1.2rem'}
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
 3 7 2 9 4
 ```
 
@@ -1067,7 +1067,7 @@ int main(){
 
 輸出：
 
-```plaintext{*}{lines:false, class:'!children:text-1.2rem'}
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
 3 7 2 9 4 
 ```
 
@@ -1086,7 +1086,7 @@ transition: fade
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-3/5" style="padding: 0px 10px 0px 0px;">
 
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5] = {9, 3, 1, 0, 8};
@@ -1113,12 +1113,12 @@ title: 指摽與陣列 範例2(1)
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-3/5" style="padding: 0px 10px 0px 0px;">
 
-```c{*}{lines:true, class:'!children:text-1.2rem'}
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5] = {9, 3, 1, 0, 8};
     printf("%d\n", *(arr+1));
-    printf("%d\n", *arr+1);
+    printf("%d\n", *arr+1); // (*arr)+1
 
     return 0;
 }
@@ -1129,7 +1129,7 @@ int main(){
 
 輸出：
 
-```plaintext{*}{lines:false, class:'!children:text-1.2rem'}
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
 3
 10
 ```
@@ -1149,7 +1149,7 @@ hide: true
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-3/5" style="padding: 0px 10px 0px 0px;">
 
-```c{*}{lines:true, class:'!children:text-1.1rem'}
+```c{*}{lines:true, class:'!children:text-1.1rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5] = {9, 3, 1, 0, 8};
@@ -1184,7 +1184,7 @@ hide: true
 <div class="flex flex-row" style="width:100%;">
 <div class="basis-3/5" style="padding: 0px 10px 0px 0px;">
 
-```c{*}{lines:true, class:'!children:text-1.1rem'}
+```c{*}{lines:true, class:'!children:text-1.1rem no-ligatures'}
 #include <stdio.h>
 int main(){
     int arr[5] = {9, 3, 1, 0, 8};
@@ -1207,7 +1207,7 @@ int main(){
 
 輸出：
 
-```plaintext{*}{lines:false, class:'!children:text-1.1rem'}
+```plaintext{*}{lines:false, class:'!children:text-1.1rem no-ligatures'}
 9
 10
 9
@@ -1227,7 +1227,7 @@ title: 二維陣列
 ### 二維陣列
 
 <br>
-```c{*}{lines:false, class:'!children:text-1.5rem'}
+```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
 int arr[3][4]; // 3x4 2d array. (3 rows, 4 columns)
 ```
 
@@ -1258,7 +1258,7 @@ title: 二維陣列宣告舉例
 
 <div style="margin-top: 18px"></div>
 
-```c{*}{lines:false, class:'!children:text-1.5rem'}
+```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
 int mtx[2][3] = { {1, 4, 2}, {3, 6, 8} };
 ```
 
@@ -1315,14 +1315,740 @@ int mtx[2][3] = { {1, 4, 2}, {3, 6, 8} };
 <table style="width: 650px; border-collapse: collapse; text-align: center;  ">
   <tbody>
     <tr style="border: none;">
-        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx</td>
-        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx+1</td>
-        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx+2</td>
-        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx+3</td>
-        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx+4</td>
-        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx+5</td>
+        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx[0]</td>
+        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx[0]+1</td>
+        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx[0]+2</td>
+        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx[1]</td>
+        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx[1]+1</td>
+        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx[1]+2</td>
     </tr>
   </tbody>
 </table>
+</div>
+
+---
+title: 二維陣列 範例1(0)
+transition: fade
+---
+
+二維陣列 範例1
+
+
+<div class="flex flex-row" style="width:100%;">
+<div class="basis-60/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+int main(){
+    int A[2][3] = { 
+        {0, 1, 2}, 
+        {3, 4, 5} 
+    };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+```
+
+</div>
+<div class="basis-40/100" style="padding: 0px 0px 0px 20px;">
+
+
+
+</div>
+</div>
+
+---
+title: 二維陣列 範例1(1)
+---
+
+二維陣列 範例1
+
+
+<div class="flex flex-row" style="width:100%;">
+<div class="basis-60/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+int main(){
+    int A[2][3] = { 
+        {0, 1, 2}, 
+        {3, 4, 5} 
+    };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+```
+
+</div>
+<div class="basis-40/100" style="padding: 0px 0px 0px 20px;">
+
+輸出：
+
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
+0 1 2
+3 4 5
+```
+
+</div>
+</div>
+
+---
+title: 二維陣列 範例2(0)
+---
+
+二維陣列 範例2
+
+給定由 `0` 與 `1` 組成的 $N\times N$ 矩陣，\
+判斷`1`有幾條長度為 $N$ 的連線，並輸出連線的數量。
+
+
+
+
+
+<div class="flex flex-row" style="width:100%;">
+<div class="basis-45/100" style="padding: 0px 10px 0px 0px;">
+
+輸入共有 $N+1$ 行\
+第一行給定 $N$\
+第 $2$ 行到第 $N+1$ 行\
+給定由 `0` 與 `1` 組成的 $N\times N$ 矩陣
+
+
+</div>
+<div class="basis-30/100" style="padding: 0px 10px 0px 20px;">
+
+範例輸入：
+```plaintext{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
+5
+1 0 1 0 1
+1 1 1 1 1
+1 0 1 0 0
+1 1 0 1 1
+1 0 0 0 1
+```
+
+</div>
+<div class="basis-25/100" style="padding: 0px 0px 0px 20px;">
+
+範例輸出：
+```plaintext{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
+4
+```
+
+</div>
+</div>
+
+---
+title: 二維陣列 範例2(1)
+---
+
+```c{*|3-10|12|14-23|25-34|36-51|53|*}{lines:true, class:'!children:text-1.1rem no-ligatures', maxHeight:'100%'}
+#include <stdio.h>
+int main(){
+    int N;
+    scanf("%d", &N);
+    int A[N][N];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    int cnt = 0;
+
+    // 判斷橫向
+    for (int row=0; row<N; row++) {
+        int len = 0;
+        for (int col=0; col<N; col++) {
+            if (A[row][col] == 1)
+                len++;
+        }
+        if (len == N)
+            cnt++;
+    }
+
+    // 判斷直向
+    for (int col=0; col<N; col++) {
+        int len = 0;
+        for (int row=0; row<N; row++) {
+            if (A[row][col] == 1)
+                len++;
+        }
+        if (len == N)
+            cnt++;
+    }
+
+    // 判斷對角
+    int len = 0;
+    for (int i=0; i<N; i++) {
+        if (A[i][i] == 1)
+            len++;
+    }
+    if (len == N)
+        cnt++;
+
+    len = 0;
+    for (int i=0; i<N; i++) {
+        if (A[i][N-1-i] == 1)
+            len++;
+    }
+    if (len == N)
+        cnt++;
+    
+    printf("%d\n", cnt);
+
+    return 0;
+}
+```
+
+---
+title: 函式
+layout: cover
+class: text-center
+---
+
+# 7. 函式
+## Functions 
+（使用C）
+
+<div class="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 p-4 rounded" style="color: slategray;">
+  作者：劉宸均
+</div>
+
+---
+title: 函式介紹
+layout: center
+---
+### 為什麼需要函式？
+
+<br>
+
+- 減少撰寫重覆的程式碼
+
+- 將程式碼以有意義的方式組織起來
+
+- 在相同的流程下，可藉由參數調整程式的行為
+
+- 在呼叫函式不變的狀況下，可以直接修改程式。
+
+---
+title: 函式的宣告與定義
+---
+
+### 函式的宣告與定義
+
+
+<span style="font-size: 35px;">回傳值型態 函式名稱 (參數)</span>
+
+<div style="margin-bottom: 20px;"></div>
+
+<div class="flex flex-row" style="width:100%; background-color: #4b4b33; padding: 5px; border-radius: 10px;">
+<div class="basis-40/100 content-center" style="padding: 0px 0px 0px 20px;">
+
+有回傳值：
+
+回傳一個int的型態
+
+</div>
+<div class="basis-60/100" style="padding: 0px 5px 0px 20px;">
+
+```c{*}{lines:false, class:'!children:text-1.8rem no-ligatures'}
+int add(int a, int b){
+    return a + b;
+}
+```
+
+</div>
+</div>
+
+
+<div style="margin-bottom: 20px;"></div>
+
+<div class="flex flex-row" style="width:100%; background-color: #4b4b33; padding: 5px; border-radius: 10px;">
+<div class="basis-40/100 content-center" style="padding: 0px 0px 0px 20px;">
+
+無回傳值
+
+</div>
+<div class="basis-60/100" style="padding: 0px 5px 0px 20px;">
+```c{*}{lines:false, class:'!children:text-1.8rem no-ligatures'}
+void printSquare(int x){
+    printf("%d\n", x*x);
+}
+```
+</div>
+</div>
+
+---
+title: 函式宣告範例
+---
+
+<div style="margin-bottom: 5px;"></div>
+
+<div class="flex flex-row" style="width:108%; margin-left: -33px;">
+<div class="basis-45/100" style="padding: 0px 0px 0px 0px;">
+
+<div style="font-size: 27px; margin-bottom: 10px;margin-left: 3px;">可以直接將函式加在主程式前面</div>
+
+```c{*|2-4}{lines:true, class:'!children:text-1.35rem no-ligatures'}
+#include <stdio.h>
+int add(int a, int b){
+    return a + b;
+}
+
+int main(){
+    int x, y;
+    scanf("%d %d", &x, &y);
+    printf("%d\n", add(x, y));
+    return 0;
+}
+```
+
+</div>
+<div class="basis-55/100" style="padding: 0px 0px 0px 20px;">
+
+<div style="font-size: 27px; margin-bottom: 10px; margin-left: 3px; width: 110%;">將函式在主程式前先宣告，在尾端定義</div>
+
+```c{*|2,11-13}{at: 1, lines:true, class:'!children:text-1.35rem no-ligatures'}
+#include <stdio.h>
+int add(int, int);
+
+int main(){
+    int x, y;
+    scanf("%d %d", &x, &y);
+    printf("%d\n", add(x, y));
+    return 0;
+}
+
+int add(int a, int b){
+    return a + b;
+}
+```
+
+</div>
+</div>
+
+---
+title: 函式範例1
+---
+
+函式範例1
+
+<div class="flex flex-row">
+<div class="basis-50/100" style="padding: 0px 10px 0px 0px;">
+
+
+<div style="margin-top:-8px;"></div>
+```c{*|2-5,15|6-9,16|17,10-13|*}{lines:true, class:'!children:text-0.9rem no-ligatures'}
+#include <stdio.h>
+void A(){
+    printf("You called A()\n");
+    return;
+}
+int B(){
+    printf("You called B()\n");
+    return 3;
+}
+float C(){
+    printf("You called C()\n");
+    return 5.6;
+}
+int main(){
+    A();
+    printf("%d\n", B());
+    printf("%f\n", C());
+    return 0;
+}
+```
+
+</div>
+<div class="basis-50/100" style="padding: 0px 0px 0px 10px;">
+
+<div style="margin-top:-20px;"></div>
+
+輸出：
+
+````md magic-move {at: 1, class: '!children:text-1.3rem !children:leading-1.7rem no-ligatures'}
+```plaintext
+‎
+```
+```plaintext
+You called A()
+```
+```plaintext{2-3}
+You called A()
+You called B()
+3
+```
+```plaintext{4-5}
+You called A()
+You called B()
+3
+You called C()
+5.6
+```
+```plaintext
+You called A()
+You called B()
+3
+You called C()
+5.6
+```
+````
+
+</div>
+</div>
+
+---
+title: 變數範圍 Variable scope
+layout: center
+text-align: center
+---
+
+## 變數範圍
+
+<div style="text-align: center; width: 100%; font-size: 30px;">Variable scope</div>
+
+
+---
+title: 區域變數與全域變數
+---
+
+### 區域變數與全域變數
+
+<div style="margin-bottom: 20px;"></div>
+
+<div class="flex flex-row" style="width:108%; margin-left: -33px;">
+<div class="basis-33/100" style="padding: 0px 0px 0px 0px;">
+
+- **Global variable**: 
+
+可以在任何地方存取
+
+<div style="margin-bottom: 10px;"></div>
+
+- **Local variable**: 
+
+只能在函式內存取
+
+<div style="margin-right: 10px; margin-top: 20px">
+
+<span style="font-size: 25px;">輸出：</span>
+
+```plaintext{*}{lines:false, class:'!children:text-1.4rem no-ligatures'}
+globalVar = 10
+localVar = 30
+globalVar = 11
+localVar = 20
+```
+</div>
+
+</div>
+
+<div class="basis-67/100">
+
+<div style="margin-bottom: -19px;"></div>
+
+```c{*}{lines:true, class:'!children:text-1.13rem no-ligatures'}
+#include <stdio.h>
+int globalVar = 10;
+void func();
+int main(){
+    int localVar = 20;
+    func();
+    printf("globalVar = %d\n", globalVar++);
+    printf("localVar = %d\n", localVar);
+    return 0;
+}
+void func(){
+    int localVar = 30;
+    printf("globalVar = %d\n", globalVar++);
+    printf("localVar = %d\n", localVar);
+    return;
+}
+```
+
+</div>
+</div>
+
+---
+title: 全域變數、區域變數範例
+---
+
+<div style="margin-bottom: -30px;"></div>
+
+全域變數、區域變數範例
+
+<div class="flex flex-row">
+<div class="basis-50/100" style="padding: 0px 10px 0px 0px;">
+
+
+<div style="margin-top:-8px;"></div>
+```c{*|2|14-21|15|16,3-8|16,4|16,5|16,6|16,7|17|18,9-13|18,10|18,11|18,12|19|20|*}{lines:true, class:'!children:text-0.9rem no-ligatures'}
+#include <stdio.h>
+int s = 1;
+void fun1(){
+    int s = 2;
+    s++;
+    printf("in fun1(): s = %d\n", s);
+    return;
+}
+void fun2(){
+    printf("in fun2(): s = %d\n", s++);
+    printf("in fun2(): s = %d\n", s);
+    return;
+}
+int main(){
+    printf("s = %d\n", s);
+    fun1();
+    printf("s = %d\n", s);
+    fun2();
+    printf("s = %d\n", s);
+    return 0;
+}
+```
+
+</div>
+<div class="basis-50/100" style="padding: 0px 0px 0px 10px;">
+
+<div style="margin-top:-20px;"></div>
+
+輸出：
+
+````md magic-move {at: 3, class: '!children:text-1.3rem !children:leading-1.7rem no-ligatures'}
+```plaintext
+‎
+```
+```plaintext
+s = 1
+```
+```plaintext
+s = 1
+```
+```plaintext
+s = 1
+```
+```plaintext
+s = 1
+```
+```plaintext{2}
+s = 1
+in fun1(): s = 3
+```
+```plaintext{,}
+s = 1
+in fun1(): s = 3
+```
+```plaintext{3}
+s = 1
+in fun1(): s = 3
+s = 1
+```
+```plaintext{,}
+s = 1
+in fun1(): s = 3
+s = 1
+```
+```plaintext{4}
+s = 1
+in fun1(): s = 3
+s = 1
+in fun2(): s = 1
+```
+```plaintext{5}
+s = 1
+in fun1(): s = 3
+s = 1
+in fun2(): s = 1
+in fun2(): s = 2
+```
+```plaintext{,}
+s = 1
+in fun1(): s = 3
+s = 1
+in fun2(): s = 1
+in fun2(): s = 2
+```
+```plaintext{6}
+s = 1
+in fun1(): s = 3
+s = 1
+in fun2(): s = 1
+in fun2(): s = 2
+s = 2
+```
+```plaintext{,}
+s = 1
+in fun1(): s = 3
+s = 1
+in fun2(): s = 1
+in fun2(): s = 2
+s = 2
+```
+```plaintext
+s = 1
+in fun1(): s = 3
+s = 1
+in fun2(): s = 1
+in fun2(): s = 2
+s = 2
+```
+````
+
+</div>
+</div>
+
+---
+title: 用函式傳遞變數
+---
+
+用函式傳遞變數
+
+<div class="flex flex-row">
+<div class="basis-50/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+int gcd(int a, int b){
+    while (b != 0){
+        int t = b;
+        b = a % b;
+        a = t;
+    }
+    return a;
+}
+int main(){
+    printf("%d\n", gcd(30, 18));
+    return 0;
+}
+```
+
+</div>
+<div class="basis-50/100" style="padding: 0px 0px 0px 30px;margin-top: 280px;">
+
+輸出：
+
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
+6
+```
+
+</div>
+</div>
+
+---
+title: 用函式傳遞陣列
+---
+
+用函式傳遞陣列
+
+<div class="flex flex-row">
+<div class="basis-50/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+void printArr(int a[]){
+    for(int i = 0; i < 5; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+    return;
+}
+
+int main(){
+    int arr[5] = {2, 1, 7, 4, 5};
+    printArr(arr);
+    return 0;
+}
+```
+
+</div>
+<div class="basis-50/100" style="padding: 0px 0px 0px 10px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+void printArr(int* a){
+    for(int i = 0; i < 5; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+    return;
+}
+
+int main(){
+    int arr[5] = {2, 1, 7, 4, 5};
+    printArr(arr);
+    return 0;
+}
+```
+</div>
+</div>
+
+---
+title: 用函式傳遞字串
+---
+
+用函式傳遞字串
+
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+void printStr(char* s){
+    printf("%s\n", s);
+    return;
+}
+
+int main(){
+    char s[] = "Hello, World";
+    printStr(s);
+    return 0;
+}
+```
+
+---
+title: 用函式傳遞指標
+---
+
+用函式傳遞指標
+
+<div class="flex flex-row">
+<div class="basis-50/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+void swap(int* a, int* b){
+    int t = *a;
+    *a = *b;
+    *b = t;
+    return;
+}
+int main(){
+    int x = 3, y = 5;
+    swap(&x, &y);
+    printf("%d %d\n", x, y);
+    return 0;
+}
+```
+</div>
+<div class="basis-50/100"style="padding: 0px 0px 0px 30px; margin-top: 280px;">
+
+輸出：
+
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
+5 3
+```
+
+</div>
 </div>
 
