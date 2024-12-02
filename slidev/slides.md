@@ -5,7 +5,7 @@ theme: dracula
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: 5. 陣列＆字串 
+title: 5. 陣列＆字串
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -48,13 +48,13 @@ export:
 layout: center
 ---
 
-### 為什麼需要陣列？
+### 想像一個場景
 
 ---
-title: 如果要記錄5個整數
+title: 如果要宣告5個整數
 ---
 
-<h3 style="color:white; max-width: fit-content; margin-inline: auto;padding-top: 10px"> 如果要記錄5個整數：</h3>
+<h3 style="color:white; max-width: fit-content; margin-inline: auto;padding-top: 10px"> 如果要宣告5個整數：</h3>
 <br>
 <v-click>
 <div class="chart1" style="width:300px;  margin-inline: auto; font-size: 30px">
@@ -302,7 +302,7 @@ title: 陣列圖
   <br>
   例如：`arr[3]`, `arr[0]`
   <br>
-  <div style="font-size:1.3rem"><span style="color:#f00">*</span>索引值必 > 0</div>
+  <div style="font-size:1.3rem"><span style="color:#f00">*</span>索引值必 >= 0</div>
 
 - **固定大小** \
   陣列在創建時需要指定大小，且一旦分配了大小，通常不能動態改變。
@@ -402,6 +402,7 @@ Array 範例2.1
 
 <div class="flex flex-row" style="width:870px;">
   <div class="basis-68/100" style="padding: 0px 50px 0px 10px; ">
+
 ```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
@@ -441,6 +442,7 @@ Array 範例2.1
 
 <div class="flex flex-row" style="width:100%;">
   <div class="basis-68/100" style="padding: 0px 50px 0px 10px; ">
+
 ```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
@@ -527,6 +529,7 @@ Array 範例2.2
 
 <div class="flex flex-row" style="width:100%;">
   <div class="basis-70/100" style="padding: 0px 50px 0px 10px; ">
+
 ```c{*}{lines:true, class:'!children:text-1.05rem no-ligatures'}
 #include <stdio.h>
 int main(){
@@ -579,9 +582,21 @@ class: text-center
     
 <h2>字串是什麼？</h2>
 
+<div v-click> 
+
 其實字串就是一種字元陣列
 
 </div>
+
+</div>
+
+---
+layout: center
+---
+
+電腦本身沒有「字串」，
+
+字串是由一個一個字元(char)拼成的概念
 
 ---
 
@@ -806,6 +821,288 @@ strcmp(s1, s2)
 strcat(s1, s2);
 ```
 </div>
+
+<a href="http://tw.gitbook.net/c_standard_library/string_h.html">string.h</a>
+---
+title: 二維陣列
+---
+
+### 二維陣列
+
+<br>
+```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
+int arr[3][4]; // 3x4 2d array. (3 rows, 4 columns)
+```
+
+<Arrow x1="134" y1="194" x2="183" y2="163" color="#3ce489"/>
+<span class="absolute left-123px top-208px transform -translate-x-1/2 -translate-y-1/2" font-size="1.75rem" style="color: #3ce489">row</span>
+<Arrow x1="130" y1="225" x2="174" y2="320" color="#3ce489"/>
+<span class="absolute left-98px top-394.5px transform -translate-x-1/2 -translate-y-1/2" font-size="1.3rem" style="color: white; background-color:#3ce489; border-radius: 8px; padding: 4px 6px 2.2px 6px;">3 rows</span>
+
+<Arrow x1="220" y1="193" x2="228" y2="164" color="#e4bb4f"/>
+<span class="absolute left-225px top-208px transform -translate-x-1/2 -translate-y-1/2" font-size="1.75rem" style="color: #e4bb4f">column</span>
+<Arrow x1="200" y1="225" x2="237" y2="287" color="#e4bb4f"/>
+<span class="absolute left-481px top-243px transform -translate-x-1/2 -translate-y-1/2" font-size="1.3rem" style="color: white; background-color:#e4bb4f; border-radius: 8px; padding: 4.1px 6px 2px 6px;">4 columns</span>
+
+<svg width="68" height="149" class="absolute left-159px top-320px">
+  <rect width="100%" height="100%" style="fill:transparent; stroke:#3ce489; stroke-width:5;"/>
+</svg>
+<svg width="486" height="31" class="absolute left-238px top-277px">
+  <rect width="100%" height="100%" style="fill:transparent; stroke:#e4bb4f; stroke-width:5;"/>
+</svg>
+<img src="https://imgur.com/N9kpxUz.png" class="object-contain h-60 rounded-lg" style="margin-top:82px; margin-left:80px;"></img>
+
+
+---
+title: 二維陣列宣告舉例
+---
+
+### 二維陣列
+
+<div style="margin-top: 18px"></div>
+
+```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
+int mtx[2][3] = { {1, 4, 2}, {3, 6, 8} };
+```
+
+<div class="rounded-lg" style="padding:17px; background-color: #e9fef2; display: flex; width: fit-content; margin-top: 10px">
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;"></td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 0</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 1</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 2</td>
+    </tr>
+    <tr style="border: none;">
+      <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">ROW 0</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">1</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">4</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">2</td>
+    </tr>
+    <tr style="border: none;">
+      <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">ROW 1</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">3</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">6</td>
+        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div style="background-color: #fff8ef; padding: 5px 20px 10px 60px; margin-top: 15px; margin-left: 0px; border-radius: 5px; width: fit-content;">
+<span font-size="1.75rem" style="color: red; margin-left: -50px">在記憶體中的排列方式：</span>
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][0]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][1]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][2]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][0]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][1]</td>
+        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][2]</td>
+    </tr>
+  </tbody>
+</table>
+<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
+  <tbody>
+    <tr style="border: none;">
+        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">1</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">4</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">2</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">3</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">6</td>
+        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+---
+title: 二維陣列 範例1(0)
+transition: fade
+---
+
+二維陣列 範例1
+
+
+<div class="flex flex-row" style="width:100%;">
+<div class="basis-60/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+int main(){
+    int A[2][3] = { 
+        {0, 1, 2}, 
+        {3, 4, 5} 
+    };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+```
+
+</div>
+<div class="basis-40/100" style="padding: 0px 0px 0px 20px;">
+
+
+
+</div>
+</div>
+
+---
+title: 二維陣列 範例1(1)
+---
+
+二維陣列 範例1
+
+
+<div class="flex flex-row" style="width:100%;">
+<div class="basis-60/100" style="padding: 0px 10px 0px 0px;">
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+int main(){
+    int A[2][3] = { 
+        {0, 1, 2}, 
+        {3, 4, 5} 
+    };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+```
+
+</div>
+<div class="basis-40/100" style="padding: 0px 0px 0px 20px;">
+
+輸出：
+
+```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
+0 1 2
+3 4 5
+```
+
+</div>
+</div>
+
+---
+title: 二維陣列 範例2(0)
+---
+
+二維陣列 範例2
+
+給定由 `0` 與 `1` 組成的 $N\times N$ 矩陣，\
+判斷`1`有幾條長度為 $N$ 的連線，並輸出連線的數量。
+
+
+
+
+
+<div class="flex flex-row" style="width:100%;">
+<div class="basis-45/100" style="padding: 0px 10px 0px 0px;">
+
+輸入共有 $N+1$ 行\
+第一行給定 $N$\
+第 $2$ 行到第 $N+1$ 行\
+給定由 `0` 與 `1` 組成的 $N\times N$ 矩陣
+
+
+</div>
+<div class="basis-30/100" style="padding: 0px 10px 0px 20px;">
+
+範例輸入：
+```plaintext{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
+5
+1 0 1 0 1
+1 1 1 1 1
+1 0 1 0 0
+1 1 0 1 1
+1 0 0 0 1
+```
+
+</div>
+<div class="basis-25/100" style="padding: 0px 0px 0px 20px;">
+
+範例輸出：
+```plaintext{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
+4
+```
+
+</div>
+</div>
+
+---
+title: 二維陣列 範例2(1)
+---
+
+```c{*|3-10|12|14-23|25-34|36-51|53|*}{lines:true, class:'!children:text-1.1rem no-ligatures', maxHeight:'100%'}
+#include <stdio.h>
+int main(){
+    int N;
+    scanf("%d", &N);
+    int A[N][N];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    int count = 0;
+
+    // 判斷橫向
+    for (int row=0; row<N; row++) {
+        int len = 0;
+        for (int col=0; col<N; col++) {
+            if (A[row][col] == 1)
+                len++;
+        }
+        if (len == N)
+            count++;
+    }
+
+    // 判斷直向
+    for (int col=0; col<N; col++) {
+        int len = 0;
+        for (int row=0; row<N; row++) {
+            if (A[row][col] == 1)
+                len++;
+        }
+        if (len == N)
+            count++;
+    }
+
+    // 判斷對角
+    int len = 0;
+    for (int i=0; i<N; i++) {
+        if (A[i][i] == 1)
+            len++;
+    }
+    if (len == N)
+        count++;
+
+    len = 0;
+    for (int i=0; i<N; i++) {
+        if (A[i][N-1-i] == 1)
+            len++;
+    }
+    if (len == N)
+        count++;
+    
+    printf("%d\n", count);
+
+    return 0;
+}
+```
 
 ---
 title: 指標
@@ -1219,299 +1516,6 @@ int main(){
 
 </div>
 </div>
-
----
-title: 二維陣列
----
-
-### 二維陣列
-
-<br>
-```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
-int arr[3][4]; // 3x4 2d array. (3 rows, 4 columns)
-```
-
-<Arrow x1="134" y1="194" x2="183" y2="163" color="#3ce489"/>
-<span class="absolute left-123px top-208px transform -translate-x-1/2 -translate-y-1/2" font-size="1.75rem" style="color: #3ce489">row</span>
-<Arrow x1="130" y1="225" x2="174" y2="320" color="#3ce489"/>
-<span class="absolute left-98px top-394.5px transform -translate-x-1/2 -translate-y-1/2" font-size="1.3rem" style="color: white; background-color:#3ce489; border-radius: 8px; padding: 4px 6px 2.2px 6px;">3 rows</span>
-
-<Arrow x1="220" y1="193" x2="228" y2="164" color="#e4bb4f"/>
-<span class="absolute left-225px top-208px transform -translate-x-1/2 -translate-y-1/2" font-size="1.75rem" style="color: #e4bb4f">column</span>
-<Arrow x1="200" y1="225" x2="237" y2="287" color="#e4bb4f"/>
-<span class="absolute left-481px top-243px transform -translate-x-1/2 -translate-y-1/2" font-size="1.3rem" style="color: white; background-color:#e4bb4f; border-radius: 8px; padding: 4.1px 6px 2px 6px;">4 columns</span>
-
-<svg width="68" height="149" class="absolute left-159px top-320px">
-  <rect width="100%" height="100%" style="fill:transparent; stroke:#3ce489; stroke-width:5;"/>
-</svg>
-<svg width="486" height="31" class="absolute left-238px top-277px">
-  <rect width="100%" height="100%" style="fill:transparent; stroke:#e4bb4f; stroke-width:5;"/>
-</svg>
-<img src="https://imgur.com/N9kpxUz.png" class="object-contain h-60 rounded-lg" style="margin-top:82px; margin-left:80px;"></img>
-
-
----
-title: 二維陣列宣告舉例
----
-
-### 二維陣列
-
-<div style="margin-top: 18px"></div>
-
-```c{*}{lines:false, class:'!children:text-1.5rem no-ligatures'}
-int mtx[2][3] = { {1, 4, 2}, {3, 6, 8} };
-```
-
-<div class="rounded-lg" style="padding:17px; background-color: #e9fef2; display: flex; width: fit-content; margin-top: 10px">
-<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
-  <tbody>
-    <tr style="border: none;">
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;"></td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 0</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 1</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #fae5cf; color: black; font-size: 22px;">COLUMN 2</td>
-    </tr>
-    <tr style="border: none;">
-      <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">ROW 0</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">1</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">4</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #dbead5; color: black; font-size: 22px;">2</td>
-    </tr>
-    <tr style="border: none;">
-      <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">ROW 1</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">3</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">6</td>
-        <td style="border: 1.5px solid black; padding: 5px; background-color: #d1e2f2; color: black; font-size: 22px;">8</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div style="background-color: #fff8ef; padding: 5px 20px 10px 60px; margin-top: 15px; margin-left: 0px; border-radius: 5px; width: fit-content;">
-<span font-size="1.75rem" style="color: red; margin-left: -50px">在記憶體中的排列方式：</span>
-<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
-  <tbody>
-    <tr style="border: none;">
-        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][0]</td>
-        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][1]</td>
-        <td style="border: 0px; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px;">mtx[0][2]</td>
-        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][0]</td>
-        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][1]</td>
-        <td style="border: 0px; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px;">mtx[1][2]</td>
-    </tr>
-  </tbody>
-</table>
-<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
-  <tbody>
-    <tr style="border: none;">
-        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">1</td>
-        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">4</td>
-        <td style="border: 1px solid black; padding: 10px; background-color: #dbead5; color: black; font-size: 24px;">2</td>
-        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">3</td>
-        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">6</td>
-        <td style="border: 1px solid black; padding: 10px; background-color: #d1e2f2; color: black; font-size: 24px;">8</td>
-    </tr>
-  </tbody>
-</table>
-<table style="width: 650px; border-collapse: collapse; text-align: center;  ">
-  <tbody>
-    <tr style="border: none;">
-        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx[0]</td>
-        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx[0]+1</td>
-        <td style="border: none; padding: 0px 0px; background-color: #dbead500; color: black; font-size: 20px; width:16.66%">mtx[0]+2</td>
-        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx[1]</td>
-        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx[1]+1</td>
-        <td style="border: none; padding: 0px 0px; background-color: #d1e2f200; color: black; font-size: 20px; width:16.66%">mtx[1]+2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
----
-title: 二維陣列 範例1(0)
-transition: fade
----
-
-二維陣列 範例1
-
-
-<div class="flex flex-row" style="width:100%;">
-<div class="basis-60/100" style="padding: 0px 10px 0px 0px;">
-
-```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
-#include <stdio.h>
-int main(){
-    int A[2][3] = { 
-        {0, 1, 2}, 
-        {3, 4, 5} 
-    };
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            printf("%d ", A[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
-}
-
-```
-
-</div>
-<div class="basis-40/100" style="padding: 0px 0px 0px 20px;">
-
-
-
-</div>
-</div>
-
----
-title: 二維陣列 範例1(1)
----
-
-二維陣列 範例1
-
-
-<div class="flex flex-row" style="width:100%;">
-<div class="basis-60/100" style="padding: 0px 10px 0px 0px;">
-
-```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
-#include <stdio.h>
-int main(){
-    int A[2][3] = { 
-        {0, 1, 2}, 
-        {3, 4, 5} 
-    };
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            printf("%d ", A[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
-}
-
-```
-
-</div>
-<div class="basis-40/100" style="padding: 0px 0px 0px 20px;">
-
-輸出：
-
-```plaintext{*}{lines:false, class:'!children:text-1.2rem no-ligatures'}
-0 1 2
-3 4 5
-```
-
-</div>
-</div>
-
----
-title: 二維陣列 範例2(0)
----
-
-二維陣列 範例2
-
-給定由 `0` 與 `1` 組成的 $N\times N$ 矩陣，\
-判斷`1`有幾條長度為 $N$ 的連線，並輸出連線的數量。
-
-
-
-
-
-<div class="flex flex-row" style="width:100%;">
-<div class="basis-45/100" style="padding: 0px 10px 0px 0px;">
-
-輸入共有 $N+1$ 行\
-第一行給定 $N$\
-第 $2$ 行到第 $N+1$ 行\
-給定由 `0` 與 `1` 組成的 $N\times N$ 矩陣
-
-
-</div>
-<div class="basis-30/100" style="padding: 0px 10px 0px 20px;">
-
-範例輸入：
-```plaintext{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
-5
-1 0 1 0 1
-1 1 1 1 1
-1 0 1 0 0
-1 1 0 1 1
-1 0 0 0 1
-```
-
-</div>
-<div class="basis-25/100" style="padding: 0px 0px 0px 20px;">
-
-範例輸出：
-```plaintext{*}{lines:false, class:'!children:text-1.6rem no-ligatures'}
-4
-```
-
-</div>
-</div>
-
----
-title: 二維陣列 範例2(1)
----
-
-```c{*|3-10|12|14-23|25-34|36-51|53|*}{lines:true, class:'!children:text-1.1rem no-ligatures', maxHeight:'100%'}
-#include <stdio.h>
-int main(){
-    int N;
-    scanf("%d", &N);
-    int A[N][N];
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            scanf("%d", &A[i][j]);
-        }
-    }
-
-    int cnt = 0;
-
-    // 判斷橫向
-    for (int row=0; row<N; row++) {
-        int len = 0;
-        for (int col=0; col<N; col++) {
-            if (A[row][col] == 1)
-                len++;
-        }
-        if (len == N)
-            cnt++;
-    }
-
-    // 判斷直向
-    for (int col=0; col<N; col++) {
-        int len = 0;
-        for (int row=0; row<N; row++) {
-            if (A[row][col] == 1)
-                len++;
-        }
-        if (len == N)
-            cnt++;
-    }
-
-    // 判斷對角
-    int len = 0;
-    for (int i=0; i<N; i++) {
-        if (A[i][i] == 1)
-            len++;
-    }
-    if (len == N)
-        cnt++;
-
-    len = 0;
-    for (int i=0; i<N; i++) {
-        if (A[i][N-1-i] == 1)
-            len++;
-    }
-    if (len == N)
-        cnt++;
-    
-    printf("%d\n", cnt);
-
-    return 0;
-}
-```
 
 ---
 title: 函式
@@ -2052,3 +2056,26 @@ int main(){
 </div>
 </div>
 
+---
+title: 用函式傳遞二維陣列
+---
+
+用函式傳遞二維陣列
+
+```c{*}{lines:true, class:'!children:text-1.2rem no-ligatures'}
+#include <stdio.h>
+void printArr(int a[][3]){
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    return;
+}
+int main(){
+    int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    printArr(arr);
+    return 0;
+}
+```
